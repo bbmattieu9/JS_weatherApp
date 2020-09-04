@@ -1,9 +1,6 @@
 // import api file here
 
-
-// Add this to an external file and import it; Use standard convention for your folder structure mr.Mattieu!
-
-
+// When the page loads
 window.addEventListener('load', () => {
 
     let tempDescription = document.querySelector('.temperature-description');
@@ -16,6 +13,7 @@ window.addEventListener('load', () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
 
+            // destructure props from the geolocation object
             let { longitude, latitude } = position.coords;
 
             // construct openWeatherApi url with long & lat from geolocation
