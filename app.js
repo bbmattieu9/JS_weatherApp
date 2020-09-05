@@ -1,5 +1,9 @@
 // import api file here
 
+if ('serviceWorker' in navigator) {
+    console.log('[Service worker is supported!]');  
+}
+
 // When the page loads
 window.addEventListener('load', () => {
 
