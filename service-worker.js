@@ -1,5 +1,9 @@
-// make sure sw is supported
+// Call install event
+self.addEventListener('install', e => {
+    console.log('[Service Worker Installed]');
+});
 
-// if ('serviceWorker' in navigator) {
-//     console.log('[Service worker is supported!]');  
-// }
+// Call Activate Event
+self.addEventListener('activate', e => {
+    console.log('[Service Worker Activated!]');
+});

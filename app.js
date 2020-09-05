@@ -1,7 +1,13 @@
 // import api file here
 
 if ('serviceWorker' in navigator) {
-    console.log('[Service worker is supported!]');  
+
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+             .register('service-worker.js')
+             .then(reg => console.log('[Servive Worker]: Registered!', reg))
+             .catch(err => console.log(`[Service worker error] ${err}`))
+    })
 }
 
 // When the page loads
